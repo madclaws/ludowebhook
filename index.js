@@ -73,11 +73,9 @@ function handleGameplay(sender_psid,receivedMessage){
 								"payload":"{}",
 								"game_metadata":{
 									"context_id":""
-								"
-								"game_metadata":{
-									"context_id":""
-								}
+								}	
 							}
+						]	
 					}
 				]
 			}
