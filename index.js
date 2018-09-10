@@ -122,7 +122,7 @@ var headers = {
 var dataString = `{
   "messaging_type": "UPDATE",
   "recipient": {
-    "id": ${sender_psid}
+    "id": ${receivedMessage.player_id}
   },
   "message": {
     "attachment": {
@@ -135,7 +135,7 @@ var dataString = `{
             "buttons": [
               {
                 "type": "game_play",
-                "title": "Play Tic-Tac-Toe.",
+                "title": "Play Ludo With Friends.",
                 "payload": "{}",
                 "game_metadata": {
                 }
