@@ -2,6 +2,7 @@
 const express = require('express');
 const request=require('request');
 const body_parser = require('body-parser');
+const shell=require('shelljs');
 const app=express().use(body_parser.json());
 app.listen(1337,'0.0.0.0',()=>console.log("WebHook is listening"));
 app.post('/webhook',(req,res)=>{
@@ -58,7 +59,8 @@ function handleMessage(sender_psid,receivedMessage){
 function handleGameplay(sender_psid,receivedMessage){
 	console.log("....handling game_play......");
 	let response;
-	response={
+	shell.exec("node -v");
+	/* response={
 		"attachement":{
 			"type":"template",
 			"payload":{
@@ -81,7 +83,7 @@ function handleGameplay(sender_psid,receivedMessage){
 			}
 		}
 	}
-	callSendAPI(sender_psid,response);
+	callSendAPI(sender_psid,response); */
 };
 function handlePostback(sender_psid,received_postback){
 
