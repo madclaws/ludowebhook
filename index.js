@@ -58,7 +58,7 @@ function handleMessage(sender_psid,receivedMessage){
 
 function handleGameplay(sender_psid,receivedMessage){
 	console.log("....handling game_play......");
-	
+/* 	
 	let fbpost="curl "+
 	"'"+ "https://graph.facebook.com/v2.6/me/messages?access_token=EAACtKTHcf5sBAKuaWJBK6NBQAn9G8cGP8JYkeaRzUhxLpcHBVu9d0LFyxfip1nxHgVzUOV675fo2jnUPaW6fk"+
 	"UGoSC3zwHKsDcKunvePwZBkM6dh1JIJZBGFcF5aZC2Jk0y8xsh3obOtezEehAgb9ecCSjr9WTrTX3vQrX4MgZDZD"+"'"+" -X POST -H "+"'"+"Content-Type: application/json"+"'"+ "-d"+ "'"+"{"+
@@ -89,9 +89,9 @@ function handleGameplay(sender_psid,receivedMessage){
 			"}"+
 		"}}"+"'";
 
-		shell.exec(fbpost);
+		shell.exec(fbpost); */
 		
-	/* let response;
+	let response;
 	response={
 		"attachement":{
 			"type":"template",
@@ -114,7 +114,7 @@ function handleGameplay(sender_psid,receivedMessage){
 			}
 		}
 	}
-	callSendAPI(sender_psid,response); */
+	callSendAPI(sender_psid,response);
 };
 function handlePostback(sender_psid,received_postback){
 
@@ -122,6 +122,7 @@ function handlePostback(sender_psid,received_postback){
 
 function callSendAPI(sender_psid,response){
 	let request_body;
+	console.log("access token",process.env.PAGE_ACCESS_TOKEN);
 	request_body={
 		"messaging_type":"UPDATE",
 		"recipient":{
