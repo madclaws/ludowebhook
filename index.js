@@ -58,8 +58,8 @@ function handleMessage(sender_psid,receivedMessage){
 
 function handleGameplay(sender_psid,receivedMessage){
 	console.log("....handling game_play......");
-	shell.exec();
-	"curl"+
+	
+	let fbpost="curl"+
 	"'"+ "https://graph.facebook.com/v2.6/me/messages?access_token=EAACtKTHcf5sBAKuaWJBK6NBQAn9G8cGP8JYkeaRzUhxLpcHBVu9d0LFyxfip1nxHgVzUOV675fo2jnUPaW6fk"+
 	"UGoSC3zwHKsDcKunvePwZBkM6dh1JIJZBGFcF5aZC2Jk0y8xsh3obOtezEehAgb9ecCSjr9WTrTX3vQrX4MgZDZD"+"'"+" -X POST -H "+"'"+"Content-Type: application/json"+"'"+ "-d"+ "'"+"{"+
 		"'"+"messaging_type"+"':" +"'"+"UPDATE"+"',"+
@@ -87,7 +87,9 @@ function handleGameplay(sender_psid,receivedMessage){
 					"]"+
 				"}"+
 			"}"+
-		"}}"+"'"
+		"}}"+"'";
+
+		shell.exec(fbpost);
 		
 	/* let response;
 	response={
