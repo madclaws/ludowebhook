@@ -112,7 +112,7 @@ function callback(error, response, body) {
     }
 }
 
-request(options, callback);
+// request(options, callback);
 };
 function handlePostback(sender_psid,received_postback){
 
