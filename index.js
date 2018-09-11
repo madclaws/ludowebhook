@@ -64,7 +64,7 @@ var headers = {
 var dataString = `{
   "messaging_type": "UPDATE",
   "recipient": {
-    "id": ${receivedMessage.player_id}
+    "id": ${sender_psid}
   },
   "message": {
     "attachment": {
