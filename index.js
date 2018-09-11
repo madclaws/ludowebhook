@@ -8,7 +8,7 @@ const app=express().use(body_parser.json());
 let _socket;
 app.listen(1337,'0.0.0.0',()=>{
 	console.log("WebHook is listening");
-	this.connectToLudoMainServer();
+	connectToLudoMainServer();
 });
 app.post('/webhook',(req,res)=>{
 	let body=req.body;
