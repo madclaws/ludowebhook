@@ -3,8 +3,13 @@ const express = require('express');
 const request=require('request');
 const body_parser = require('body-parser');
 const shell=require('shelljs');
+const io=require("socket.io-client");
 const app=express().use(body_parser.json());
-app.listen(1337,'0.0.0.0',()=>console.log("WebHook is listening"));
+let _socket;
+app.listen(1337,'0.0.0.0',()=>{
+	console.log("WebHook is listening");
+	this.connectToLudoMainServer();
+});
 app.post('/webhook',(req,res)=>{
 	let body=req.body;
 	if(body.object==="page"){
@@ -134,3 +139,11 @@ function callSendAPI(sender_psid,response){
 		}
 	});
 };
+
+function connectToLudoMainServer(){
+	_socket=io.connect('staging.ludo.gamezop.io');
+	_socket.on('connect',()=>{
+		console.log("Connected to ludo Main Server :)");
+	});
+};
+
