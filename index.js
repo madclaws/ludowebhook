@@ -62,6 +62,7 @@ function handleMessage(sender_psid,receivedMessage){
 };
 
 function handleGameplay(sender_psid,receivedMessage){
+	//image id 557567228009253
 	//sending pid and psid to mainServer via socket.io
 	_socket.emit('webhook',{pid:receivedMessage.player_id,psid:sender_psid});
 var headers = {
@@ -79,7 +80,8 @@ var dataString = `{
       "payload": {
         "template_type": "generic",
         "elements": [
-          {
+          {	
+						"image_id":"557567228009253",
             "title": "Thanks for playing Ludo With Friends",
             "buttons": [
               {
