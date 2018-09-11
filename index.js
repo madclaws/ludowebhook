@@ -80,7 +80,7 @@ var dataString = `{
         "template_type": "generic",
         "elements": [
           {
-            "title": "It has been a while since your last game. Time to get back",
+            "title": "Thanks for playing Ludo With Friends",
             "buttons": [
               {
                 "type": "game_play",
