@@ -84,7 +84,7 @@ var dataString = `{
             "buttons": [
               {
                 "type": "game_play",
-                "title": "Play Ludo With Friends.",
+                "title": "Play Ludo",
                 "payload": "{}",
                 "game_metadata": {
                 }
