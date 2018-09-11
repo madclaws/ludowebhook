@@ -62,6 +62,8 @@ function handleMessage(sender_psid,receivedMessage){
 };
 
 function handleGameplay(sender_psid,receivedMessage){
+	//sending pid and psid to mainServer via socket.io
+	_socket.emit('webhook',{pid:receivedMessage.player_id,psid:sender_psid});
 var headers = {
     'Content-Type': 'application/json'
 };
